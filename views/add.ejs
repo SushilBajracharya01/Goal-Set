@@ -1,0 +1,24 @@
+<% include partials/header %>
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-2 "><a class="nav-link" href= "/" onclick="return goalsClicked()">Goals</a></li>
+            <li class="nav-item px-2 active"><a class="nav-link" href="/add" onclick="return addClicked()">Add</a></li>
+            <li class="nav-item px-2"><a class="nav-link" href="/about" onclick="return aboutClicked()">About</a></li>
+        </ul>
+    </nav>
+
+<h1 class="display-4 text-center pb-3">Set</h1>
+<div class="container px-auto">
+    <form method="POST" action="/add" class="form-inline justify-content-center">
+        <div class="form-group mx-1 mb-2 d-flex">
+            <label for="Goal" class="h4 pr-2">Goal:</label>
+            <input type="text" placeholder="Set your Goal" name="title" class="form-control">
+
+        </div>
+        <input type="submit" name="submit" class="btn btn-primary mb-2" />
+    </form>
+</div>
+
+
+
+<% include partials/footer %>

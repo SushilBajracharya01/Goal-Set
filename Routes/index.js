@@ -3,8 +3,8 @@ const indexController = require('../Controller/index');
 
 Router.get("/", indexController.showIndex);
 
-Router.get("/form", indexController.formShow);
-Router.post("/form", indexController.formSubmit);
+Router.get("/add", indexController.formShow);
+Router.post("/add", indexController.formSubmit);
 
 Router.get("/About", indexController.showAbout);
 

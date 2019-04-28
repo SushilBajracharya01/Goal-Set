@@ -1,5 +1,18 @@
 <% include partials/header %>
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+    <ul class="navbar-nav mx-auto">
+        <li class="nav-item px-2 "><a class="nav-link" href="/" onclick="return goalsClicked()">Goals</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="/add" onclick="return addClicked()">Add</a></li>
+        <li class="nav-item px-2 active"><a class="nav-link" href="/about" onclick="return aboutClicked()">About</a>
+        </li>
+    </ul>
+</nav>
 
+<div class="container p-3">
     <h1>Hello,</h1>
     <h4>It's me, Sushil Bajracharya</h4>
+
+    <p class="lead">And this is the about page</p>
+</div>
+
 <% include partials/footer %>

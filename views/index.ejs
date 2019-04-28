@@ -1,20 +1,45 @@
 <% include partials/header %>
-<h1>Hey <%= name %></h1>
-<h4>Here is your list of goals: </h4>
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+    <ul class="navbar-nav mx-auto">
+        <li class="nav-item px-2 active"><a class="nav-link" href="/" onclick="return goalsClicked()">Goals</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="/add" onclick="return addClicked()">Add</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="/about" onclick="return aboutClicked()">About</a>
+        </li>
+    </ul>
+</nav>
 
-<div>
-    <ol>
-        <%goals.map (function (goal){%>
-            <li class="goals"><%= goal.title %></li>
-            <form action="/form/<%= goal._id %>?_method=DELETE" method="POST">
-                <button type="submit" onclick ="return confirmDelete()">Delete</button>
-            </form>
-        <%})%>
-    </ol>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2"></div>
+
+        <div class="container col-8">
+            <h1 class="display-4 text-center py-2">Goals</h1>
+
+            <div class="container pb-3">
+                <ol class="goals">
+
+                    <%goals.map (function (goal){%>
+                    <li class="py-1"><%= goal.title %>
+                        <form class="pl-4 d-inline" action="/form/<%= goal._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-info" type="submit"
+                                onclick="return confirmDelete()">Completed</button>
+                        </form>
+                    </li>
+                    <%})%>
+                </ol>
+            </div>
+        </div>
+
+        <div class="col-2"></div>
+
+
+
+
+    </div>
+
 </div>
-
 <script>
-    function confirmDelete () {
+    function confirmDelete() {
         return confirm("Are you sure? ");
     }
 </script>
