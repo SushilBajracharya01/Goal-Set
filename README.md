@@ -10,7 +10,7 @@ Goal-Set is a Web app which is built with MongoDb, Express, EJs, Node Stack. It 
 can set your goals and achieve them. Goal-set is an output of NodeJs Workshop that was held in MBM College.
 
 ## Goals
-The main goal of this project was 
+The main goals of this project were 
   * To learn about MongoDb, Express, EJs, Node Stack
   * To learn to deploy Web app in heroko 
 
